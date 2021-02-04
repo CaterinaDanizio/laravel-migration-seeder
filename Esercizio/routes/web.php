@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/brand', 'BrandController@index')
+    -> name('brand-index');
+
+Route::get('/brand/{id}', 'BrandController@show') 
+    -> name('brand-show');
+
+Route::get('/employee', 'EmployeeController@index')
+    -> name('employee-index');
+
+Route::get('/employee/{id}', 'EmployeeController@show') 
+    -> name('employee-show');
+
+Route::get('/location', 'LocationController@index')
+    -> name('location-index');
+
+Route::get('/location/{id}', 'LocationController@show') 
+    -> name('location-show');
